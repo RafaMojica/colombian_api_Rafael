@@ -1,8 +1,14 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+import ColombiaDash from "./views/ColombiaDash";
+import NotFound from "./views/notFound/NotFound";
+
 function App() {
   return (
-    <>
-      <h1> Technical test</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Navigate to="/colombia_dash" />} />
+      <Route path="/colombia_dash" element={<ColombiaDash />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
