@@ -23,16 +23,16 @@ header {
   }
 }
 
-h1,
-h2 {
+.title-main,
+.title-secondary {
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-h1 {
+.title-main {
   font-size: 2rem;
 }
 
-h2 {
+.title-secondary {
   font-size: 1.5rem;
 }
