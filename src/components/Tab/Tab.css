@@ -1,0 +1,20 @@
+button {
+  cursor: pointer;
+  border: 1px solid rgba(54, 53, 53, 0.2);
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(129, 126, 126);
+  background: rgb(128, 128, 128, 0.2);
+  color: #000;
+
+  &:hover {
+    background-color: rgb(128, 128, 128, 0.5);
+  }
+
+  &:focus {
+    background-color: rgb(128, 128, 128);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    color: #fff;
+  }
+}

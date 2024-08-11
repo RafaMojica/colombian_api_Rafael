@@ -9,3 +9,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+}
