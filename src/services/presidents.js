@@ -9,7 +9,8 @@ export const getPresidentsByPoliticalParty = async () => {
   const totalPresidents = presidents.length;
 
   const groupedByParty = presidents.reduce((acc, president) => {
-    const party = president.politicalParty || "Desconocido";
+    const party = (president.politicalParty || "Desconocido").toLowerCase();
+
     if (!acc[party]) {
       acc[party] = { count: 0, presidents: [] };
     }
