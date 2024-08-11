@@ -11,10 +11,11 @@ button {
   &:hover {
     background-color: rgb(128, 128, 128, 0.5);
   }
+}
 
-  &:focus {
-    background-color: rgb(128, 128, 128);
-    border: 1px solid rgba(128, 128, 128, 0.2);
-    color: #fff;
-  }
+.active,
+.active:hover {
+  background-color: rgb(128, 128, 128);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  color: #fff;
 }
