@@ -8,6 +8,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #000 #fff;
+}
+
+body {
+  background-color: #6464641f;
 }
 
 .tab-container {
@@ -16,10 +22,4 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.request-time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
