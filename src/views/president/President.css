@@ -1,0 +1,25 @@
+.president-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.president-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 15%;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.president-tables-container {
+  display: flex;
+  gap: 1.5rem;
+  width: 85%;
+
+  & > * {
+    flex: 1 1 100%;
+  }
+}
