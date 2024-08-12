@@ -1,10 +1,11 @@
 import { getPresidentsByPoliticalParty } from "../../services/presidents";
 import useFetchData from "../../hook/useFetchData";
 import Card from "../../components/Card/Card";
-import SkeletonPresident from "./components/SkeletonPresident/SkeletonPresident";
 import PoliticalPartiesTable from "./components/PoliticalPartiesTable/PoliticalPartiesTable";
 import "./President.css";
 import PeriodMandateTable from "./components/PeriodMandateTable/PeriodMandate";
+import TableSkeleton from "../../components/Skeleton/Table/TableSkeleton";
+import CardSkeleton from "../../components/Skeleton/Cards/CardSkeleton";
 
 const President = () => {
   const { data, loading } = useFetchData(getPresidentsByPoliticalParty);
@@ -13,19 +14,25 @@ const President = () => {
 
   return (
     <div>
-      {loading ? (
-        <SkeletonPresident />
-      ) : (
-        <>
-          <div className="president-container">
-            <div className="president-card-container">
+      <div className="president-container">
+        <div className="president-card-container">
+          {loading ? (
+            <CardSkeleton repeat={2} />
+          ) : (
+            <>
               <Card
                 title="Número total de presidentes"
                 data={`${totalPresidents}`}
               />
               <Card title="Tiempo de respuesta" data={`${time} ms`} />
-            </div>
-            <div className="president-tables-container">
+            </>
+          )}
+        </div>
+        <div className="president-tables-container">
+          {loading ? (
+            <TableSkeleton repeat={2} />
+          ) : (
+            <>
               <PoliticalPartiesTable
                 title="Presidentes Electos por Partido"
                 data={sortedParties}
@@ -34,10 +41,10 @@ const President = () => {
                 title="Periodo de Mandato"
                 data={presidents}
               />
-            </div>
-          </div>
-        </>
-      )}
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

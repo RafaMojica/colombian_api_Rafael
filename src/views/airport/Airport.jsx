@@ -4,47 +4,63 @@ import {
 } from "../../services/airports";
 import useFetchData from "../../hook/useFetchData";
 import Card from "../../components/Card/Card";
-import SkeletonAirport from "./components/SkeletonAirport/SkeletonAirport";
 import AirportsTable from "./components/AirportsTable/AirportsTable";
 import AirportsCountTable from "./components/AirportsCountTable/AirportsCountTable";
 import "./Airport.css";
+import TableSkeleton from "../../components/Skeleton/Table/TableSkeleton";
+import CardSkeleton from "../../components/Skeleton/Cards/CardSkeleton";
 
 const Airport = () => {
-  const { data, loading } = useFetchData(getAirportsByDepartmentAndCity);
-  const { data: AirportsWhitType } = useFetchData(
+  const { data, loading: loadingAirport } = useFetchData(
+    getAirportsByDepartmentAndCity
+  );
+  const { data: AirportsWhitType, loading: loadingWithType } = useFetchData(
     getAirportsByRegionDepartmentCityType
   );
 
-  const { groupedByRegionDeptCityType } = AirportsWhitType || {};
+  const { time: timeWhitType, groupedByRegionDeptCityType } =
+    AirportsWhitType || {};
   const { time, totalAirports, groupedByDepartmentCity } = data || {};
 
   return (
     <div>
-      {loading ? (
-        <SkeletonAirport />
-      ) : (
-        <>
-          <div className="airport-container">
-            <div className="airport-card-container">
+      <div className="airport-container">
+        <div className="airport-card-container">
+          {loadingAirport ? (
+            <CardSkeleton repeat={3} />
+          ) : (
+            <>
               <Card
                 title="Número total de aeropuertos"
                 data={`${totalAirports}`}
               />
-              <Card title="Tiempo de respuesta" data={`${time} ms`} />
-            </div>
-            <div className="airport-tables-container">
-              <AirportsTable
-                title="Aeropuertos"
-                data={groupedByDepartmentCity}
+              <Card
+                title="Tiempo de respuesta Aeropuertos"
+                data={`${time} ms`}
               />
-              <AirportsCountTable
-                title="Cantidad de Aeropuerto"
-                data={groupedByRegionDeptCityType}
+              <Card
+                title="Tiempo de respuesta Cantidad de Aeropuerto"
+                data={`${timeWhitType} ms`}
               />
-            </div>
-          </div>
-        </>
-      )}
+            </>
+          )}
+        </div>
+        <div className="airport-tables-container">
+          {loadingAirport ? (
+            <TableSkeleton repeat={1} />
+          ) : (
+            <AirportsTable title="Aeropuertos" data={groupedByDepartmentCity} />
+          )}
+          {loadingWithType ? (
+            <TableSkeleton repeat={1} />
+          ) : (
+            <AirportsCountTable
+              title="Cantidad de Aeropuertos"
+              data={groupedByRegionDeptCityType}
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 };

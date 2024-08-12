@@ -1,0 +1,37 @@
+.card-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.card-skeleton-title,
+.card-skeleton-info {
+  background-color: #ccc;
+  height: 30px;
+  width: 80%;
+  border-radius: 4px;
+}
+
+.card-skeleton-info {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f5f5f5;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
