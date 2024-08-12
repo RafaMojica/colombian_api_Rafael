@@ -93,6 +93,11 @@ Este proyecto aún no está desplegado, pero puedes probarlo en tu local. Siga l
    npm run dev
    ```
 
+5. Abre la Pagina web en la siguiente url
+   ```sh
+   http://localhost:5173/
+   ```
+
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
 
 ## Diseño Web
