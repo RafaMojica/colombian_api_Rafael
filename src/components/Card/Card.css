@@ -20,3 +20,23 @@
   font-size: 2rem;
   color: #5c5c5c;
 }
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-info {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-info {
+    font-size: 1.5rem;
+  }
+}

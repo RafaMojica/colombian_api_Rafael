@@ -20,6 +20,26 @@
   width: 85%;
 
   & > * {
-    flex: 1 1 100%;
+    flex: 1 1 48%;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .president-container {
+    flex-wrap: wrap;
+  }
+
+  .president-card-container {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .president-tables-container {
+    width: 100%;
+    flex-direction: column;
+    & > * {
+      flex: 1 1 100%;
+    }
   }
 }
