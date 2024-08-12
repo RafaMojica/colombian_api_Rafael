@@ -5,8 +5,6 @@ import "./AirportsCountTable.css";
 const AirportsCountTable = ({ data, title }) => {
   const columns = ["Region", "Departamento", "Ciudad", "Tipo", "Conteo"];
 
-  if (!data || typeof data !== "object") return;
-
   const rows = Object.entries(data).flatMap(([region, departments]) =>
     Object.entries(departments).flatMap(([department, cities]) =>
       Object.entries(cities).flatMap(([city, types]) =>
