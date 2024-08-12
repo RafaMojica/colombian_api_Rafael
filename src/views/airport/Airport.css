@@ -1,0 +1,25 @@
+.airport-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.airport-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 15%;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.airport-tables-container {
+  display: flex;
+  gap: 1.5rem;
+  width: 85%;
+
+  & > * {
+    flex: 1 1 100%;
+  }
+}
