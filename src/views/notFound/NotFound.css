@@ -1,0 +1,26 @@
+.container-404 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-404 {
+  font-size: 7rem;
+}
+
+.text-notFount {
+  font-size: 3rem;
+}
+
+.link-home {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: blue;
+
+  &:hover {
+    color: red;
+  }
+}
