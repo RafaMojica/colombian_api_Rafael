@@ -7,7 +7,12 @@ const PeriodMandateTable = ({ data, title }) => {
 
   const rows = data?.map(
     ({ name, lastName, startPeriodDate, endPeriodDate, image }) => [
-      image,
+      <img
+        key={name}
+        src={image || "/No-Image-Available.jpg"}
+        alt={name}
+        className="table-img"
+      />,
       `${name} ${lastName}`,
       startPeriodDate,
       endPeriodDate,

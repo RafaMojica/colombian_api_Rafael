@@ -18,11 +18,7 @@ const Table = ({ columns, rows }) => {
           <tr key={rowIndex}>
             {row.map((cell, cellIndex) => (
               <td key={cellIndex} className="table-cell">
-                {typeof cell === "string" && cell.startsWith("http") ? (
-                  <img src={cell} alt="Profile" className="table-img" />
-                ) : (
-                  cell
-                )}
+                {cell}
               </td>
             ))}
           </tr>
@@ -34,7 +30,9 @@ const Table = ({ columns, rows }) => {
 
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.string).isRequired,
-  rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+  rows: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.node]))
+  ).isRequired,
 };
 
 export default Table;
