@@ -20,14 +20,14 @@ const President = () => {
           <div className="president-container">
             <div className="president-card-container">
               <Card
-                title="Numero total de presidentes"
+                title="Número total de presidentes"
                 data={`${totalPresidents}`}
               />
               <Card title="Tiempo de respuesta" data={`${time} ms`} />
             </div>
             <div className="president-tables-container">
               <PoliticalPartiesTable
-                title="Partidos Politicos"
+                title="Presidentes Electos por Partido"
                 data={sortedParties}
               />
               <PeriodMandateTable

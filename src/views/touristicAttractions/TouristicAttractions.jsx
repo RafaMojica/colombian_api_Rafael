@@ -23,7 +23,7 @@ const TouristicAttractions = () => {
           <div className="attraction-container">
             <div className="attraction-card-container">
               <Card
-                title="Numero total de atracciones turisticas"
+                title="Número total de atracciones turisticas"
                 data={`${totalAttractions}`}
               />
               <Card title="Tiempo de respuesta" data={`${time} ms`} />

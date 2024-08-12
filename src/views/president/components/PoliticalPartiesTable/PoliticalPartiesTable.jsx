@@ -4,7 +4,7 @@ import "./PoliticalPartiesTable.css";
 
 const PoliticalPartiesTable = ({ data, title }) => {
   const columns = [
-    "Número",
+    "Posición",
     "Nombre del Partido",
     "Cantidad de Presidentes Electos",
   ];
