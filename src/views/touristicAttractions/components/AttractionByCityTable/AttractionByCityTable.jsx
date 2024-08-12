@@ -3,7 +3,7 @@ import Table from "../../../../components/Table/Table";
 import "./AttractionByCityTable.css";
 
 const AttractionByCityTable = ({ data, title }) => {
-  const columns = ["Departamento", "Ciudad", "Cantidad de Atracciones"];
+  const columns = ["Departamento", "Ciudad", "N° Atracciones"];
 
   const rows = Object.entries(data)
     .flatMap(([departamento, { cities }]) =>

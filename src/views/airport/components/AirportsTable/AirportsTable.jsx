@@ -3,7 +3,7 @@ import Table from "../../../../components/Table/Table";
 import "./AirportsTable.css";
 
 const AirportsTable = ({ data, title }) => {
-  const columns = ["Code", "Nombre", "Ciudad"];
+  const columns = ["Codigo", "Nombre", "Ciudad"];
 
   const rows = Object.entries(data).flatMap(([__, { cities }]) =>
     Object.entries(cities).flatMap(([__, { airports }]) =>

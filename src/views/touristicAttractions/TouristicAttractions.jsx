@@ -41,7 +41,7 @@ const TouristicAttractions = () => {
                 data={attractions}
               />
               <AttractionByCityTable
-                title="Atracciones por Ciudad"
+                title="Atracciones por Ubicación"
                 data={groupedByDepartmentCity}
               />
             </>

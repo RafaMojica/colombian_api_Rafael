@@ -6,7 +6,7 @@ const PoliticalPartiesTable = ({ data, title }) => {
   const columns = [
     "Posición",
     "Nombre del Partido",
-    "Cantidad de Presidentes Electos",
+    "N° de Presidentes",
   ];
 
   const rows = data?.map((party, index) => [

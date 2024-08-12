@@ -55,7 +55,7 @@ const Airport = () => {
             <TableSkeleton repeat={1} />
           ) : (
             <AirportsCountTable
-              title="Cantidad de Aeropuertos"
+              title="Especificaciones"
               data={groupedByRegionDeptCityType}
             />
           )}
