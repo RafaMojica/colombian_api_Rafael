@@ -43,6 +43,7 @@ export const getTouristicAttractionsByDepartmentAndCity = async () => {
 
   return {
     totalAttractions,
+    attractions,
     groupedByDepartmentCity,
     time: new Date(next - prev).getMilliseconds(),
   };

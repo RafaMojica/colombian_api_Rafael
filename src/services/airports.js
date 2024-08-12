@@ -29,6 +29,7 @@ export const getAirportsByDepartmentAndCity = async () => {
 
   return {
     totalAirports,
+    airports,
     groupedByDepartmentCity,
     time: new Date(next - prev).getMilliseconds(),
   };

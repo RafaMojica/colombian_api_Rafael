@@ -24,6 +24,7 @@ export const getPresidentsByPoliticalParty = async () => {
     .map(([party, data]) => ({ party, ...data }));
 
   return {
+    presidents,
     totalPresidents,
     sortedParties,
     time: new Date(next - prev).getMilliseconds(),
