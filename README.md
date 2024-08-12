@@ -100,19 +100,19 @@ Este proyecto aún no está desplegado, pero puedes probarlo en tu local. Siga l
 ### Entidad Presidentes
 
 <div align="center">
-    <img width="700" src="./public/entidad-presidentes.png"/>
+    <img width="900" src="./public/entidad-presidentes.png"/>
 </div>
 
 ### Entidad Aeropuertos
 
 <div align="center">
-    <img width="700" src="./public/entidad-aeropuertos.png"/>
+    <img width="900" src="./public/entidad-aeropuertos.png"/>
 </div>
 
 ### Entidad Atracciones Turisticas
 
 <div align="center">
-    <img width="700" src="./public/entidad-atracciones-turisticas.png"/>
+    <img width="900" src="./public/entidad-atracciones-turisticas.png"/>
 </div>
 
 </br>
