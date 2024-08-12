@@ -23,7 +23,7 @@
 </div>
 
 <div align="center">
-    <h3>Prueba Tecnica </br> Dataos & Curiosidades Colombia</h2>
+    <h3>Prueba Tecnica </br> Datos & Curiosidades Colombia</h2>
 </div>
 
 ## Tabla de contenido
